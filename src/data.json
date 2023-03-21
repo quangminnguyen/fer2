@@ -76,6 +76,7 @@
 		{
 			"id": "1",
 			"movie_id": "1",
+			"rateStar": "8",
 			"comment": "Phim này hay quá ae ạ",
 			"account_id": "2"
 		}

@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-const Home = () => {
+const Home = ({ data }) => {
 	return <div>Home</div>;
 };
 

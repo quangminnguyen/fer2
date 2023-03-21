@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-const Detail = () => {
+const Detail = ({ data }) => {
 	return <div>Detail</div>;
 };
 
