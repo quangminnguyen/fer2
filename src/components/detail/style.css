@@ -1,0 +1,22 @@
+#movieDetail {
+  width: 80%;
+  margin: auto;
+  margin-top: 3%;
+  display: flex;
+  border: 1px solid;
+}
+.image {
+  width: 50%;
+  padding: 0% 4% 4% 0%;
+  height: auto;
+  object-fit: cover;
+  border: 1px solid green;
+}
+.movieInfor {
+  width: 100%;
+  padding-bottom: 4%;
+
+  margin: 0% 4% 0% 4%;
+  text-align: start;
+  border-bottom: 1px solid rgb(207, 207, 207);
+}
