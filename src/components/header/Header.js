@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./style.css";
 const Header = () => {
 	const [search, setSearch] = useState("");
+	const navigate = useNavigate();
 	return (
 		<div className="header">
 			<div className="d-flex brand">
@@ -31,8 +32,22 @@ const Header = () => {
 				<div className="search_button">
 					<button>Tìm</button>
 				</div>
-				<button className="header_button">Đăng nhập</button>
-				<button className="header_button">Đăng ký</button>
+				<button
+					onClick={() => {
+						navigate("/login");
+					}}
+					className="header_button"
+				>
+					Đăng nhập
+				</button>
+				<button
+					onClick={() => {
+						navigate("/register");
+					}}
+					className="header_button"
+				>
+					Đăng ký
+				</button>
 			</div>
 		</div>
 	);

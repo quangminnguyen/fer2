@@ -1,0 +1,124 @@
+.auth {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.auth_wrap {
+	width: 40%;
+	margin-top: 4rem;
+	background-color: #c3d7e0;
+	padding: 4rem 2rem;
+	border-radius: 1rem;
+}
+.auth_title {
+	margin-bottom: 2rem;
+	font-size: 2rem;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+.auth_input {
+	width: 100%;
+}
+.auth_input > input {
+	width: 80%;
+	height: 4.4rem;
+	margin-bottom: 1rem;
+	outline: none;
+	padding: 0 1rem;
+	border: none;
+	border-radius: 0.5rem;
+	font-size: 1.4rem;
+}
+.auth_gender {
+	width: 80%;
+	margin: 0.6rem 0;
+	display: flex;
+	margin-left: 10%;
+	align-items: center;
+}
+.auth_gender > label {
+	font-size: 1.4rem;
+	margin-right: 1rem;
+}
+.auth_radio {
+	display: flex;
+	align-items: center;
+	margin-right: 0.7rem;
+}
+.auth_radio > input {
+	width: 1.7rem;
+	height: 1.7rem;
+}
+.auth_radio > label {
+	margin-left: 0.3rem;
+	font-size: 1.2rem;
+}
+.auth_fix {
+	width: 80%;
+	text-align: start;
+	margin-left: 10%;
+	color: red;
+	font-size: 1.4rem;
+	font-weight: 500;
+	margin-bottom: 1rem;
+}
+.auth_exist {
+	width: 80%;
+	text-align: start;
+	margin-left: 10%;
+	font-size: 1.4rem;
+	color: rgba(0, 0, 0, 0.5);
+}
+.login_link {
+	color: blue;
+	font-weight: 600;
+}
+.auth_button_login {
+	width: 80%;
+	text-align: start;
+	margin-left: 10%;
+	margin-top: 2rem;
+	margin-bottom: 3rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.auth_button_login > button {
+	padding: 0.7rem 2rem;
+	background-color: #1a6ec2;
+	color: white;
+	border: none;
+	cursor: pointer;
+	border-radius: 0.2rem;
+}
+.auth_line {
+	width: 80%;
+	margin-left: 10%;
+	border-top: 0.1rem solid white;
+	margin-bottom: 5rem;
+}
+.forogt {
+	font-size: 1.4rem;
+	color: blue;
+}
+.auth_platform {
+	display: flex;
+	justify-content: space-between;
+	width: 80%;
+	margin-left: 10%;
+	margin-bottom: 2rem;
+}
+.auth_platform > div {
+	width: 44%;
+	height: 4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: red;
+	color: white;
+	border-radius: 0.5rem;
+	font-size: 1.3rem;
+}
+.auth_platform > div:first-child {
+	background-color: #1a6ec2;
+}
