@@ -1,14 +1,7 @@
 import React, { useState } from "react";
 import "./style.css";
-const Detail = () => {
-	const [movie, setMovie] = useState({
-		id: "",
-		image: "",
-		name: "",
-		type: "",
-		year: "",
-		description: "",
-	});
+const Detail = ({ data }) => {
+	const [movie, setMovie] = useState(data.movie);
 	return (
 		<div id="movieDetail">
 			<div className="image">

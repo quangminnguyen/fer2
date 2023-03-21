@@ -4,12 +4,26 @@ import Login from "./components/login/Login";
 import Home from "./components/homepage/Home";
 import Register from "./components/register/Register";
 import Detail from "./components/detail/Detail";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import dataRoot from "./data.json";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 function App() {
 	const [data, setData] = useState(dataRoot);
+	useEffect(() => {
+		if (!localStorage.getItem("movies")) {
+			localStorage.setItem("movies", JSON.stringify(data?.movies));
+		}
+		if (!localStorage.getItem("types")) {
+			localStorage.setItem("types", JSON.stringify(data?.types));
+		}
+		if (!localStorage.getItem("accounts")) {
+			localStorage.setItem("accounts", JSON.stringify(data?.accounts));
+		}
+		if (!localStorage.getItem("reviews")) {
+			localStorage.setItem("reviews", JSON.stringify(data?.reviews));
+		}
+	}, []);
 	return (
 		<Router>
 			<div className="App">
