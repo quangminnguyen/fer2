@@ -1,29 +1,40 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./style.css";
 const Register = () => {
+	const emailRef = useRef();
+	const passwordRef = useRef();
+	const rePasswordRef = useRef();
+	const namRef = useRef();
+	const nuRef = useRef();
+
+	const handleRegister = () => {};
 	return (
 		<div className="auth">
 			<div className="auth_wrap">
 				<div className="auth_title">Đăng ký tài khoản</div>
 				<div className="auth_input">
-					<input type="text" placeholder="Email *" />
+					<input ref={emailRef} type="text" placeholder="Email *" />
 				</div>
 				<div className="auth_input">
-					<input type="text" placeholder="Password *" />
+					<input ref={passwordRef} type="text" placeholder="Password *" />
 				</div>
 				<div className="auth_input">
-					<input type="text" placeholder="Re-Password *" />
+					<input ref={rePasswordRef} type="text" placeholder="Re-Password *" />
 				</div>
 				<div className="auth_gender">
 					<label>Giới tính</label>
 					<div className="auth_radio">
 						<input defaultChecked id="nam" type="radio" name="gender" />
-						<label htmlFor="nam">Nam</label>
+						<label ref={namRef} htmlFor="nam">
+							Nam
+						</label>
 					</div>
 					<div className="auth_radio">
 						<input id="nu" type="radio" name="gender" />
-						<label htmlFor="nu">Nữ</label>
+						<label ref={nuRef} htmlFor="nu">
+							Nữ
+						</label>
 					</div>
 				</div>
 				<div className="auth_fix">
@@ -36,7 +47,7 @@ const Register = () => {
 					</Link>
 				</div>
 				<div className="auth_button_login">
-					<button>Đăng ký</button>
+					<button onClick={handleRegister}>Đăng ký</button>
 				</div>
 				<div className="auth_line"></div>
 			</div>
