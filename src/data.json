@@ -6,7 +6,7 @@
 			"name": "Vua Hải Tặc",
 			"type": "1",
 			"year": "2022",
-			"description": "One Piece, từng được xuất bản tại Việt Nam dưới tên gọi Đảo Hải Tặc là bộ manga dành cho lứa tuổi thiếu niên của tác giả Oda Eiichiro, được đăng định kì trên tạp chí Weekly Shōnen Jump, ra mắt lần đầu trên ấn bản số 34 vào ngày 19 tháng 7 năm 1997."
+			"h": "One Piece, từng được xuất bản tại Việt Nam dưới tên gọi Đảo Hải Tặc là bộ manga dành cho lứa tuổi thiếu niên của tác giả Oda Eiichiro, được đăng định kì trên tạp chí Weekly Shōnen Jump, ra mắt lần đầu trên ấn bản số 34 vào ngày 19 tháng 7 năm 1997."
 		},
 		{
 			"id": "2",
@@ -76,6 +76,7 @@
 		{
 			"id": "1",
 			"movie_id": "1",
+			"rateStar": "8",
 			"comment": "Phim này hay quá ae ạ",
 			"account_id": "2"
 		}
