@@ -63,19 +63,22 @@
 			"id": "1",
 			"username": "admin",
 			"password": "admin",
-			"role": "admin"
+			"role": "admin",
+			"gender": "male"
 		},
 		{
 			"id": "2",
 			"username": "user",
 			"password": "user",
-			"role": "user"
+			"role": "user",
+			"gender": "male"
 		}
 	],
 	"reviews": [
 		{
 			"id": "1",
 			"movie_id": "1",
+			"rateStar": "8",
 			"comment": "Phim này hay quá ae ạ",
 			"account_id": "2"
 		}
