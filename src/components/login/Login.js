@@ -1,7 +1,47 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useRef, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import "./style.css";
 const Login = () => {
+	const emailRef = useRef();
+	const passwordRef = useRef();
+	const [msg, setMsg] = useState({});
+	const navigate = useNavigate();
+	const handleLogin = () => {
+		const user = {
+			email: emailRef.current.value,
+			password: passwordRef.current.value,
+		};
+		let ms = {};
+		let check = false;
+		if (!user?.email) {
+			ms.email = true;
+			check = true;
+		}
+		if (!user?.password) {
+			check = true;
+			ms.password = true;
+		}
+		setMsg({ ...ms });
+		if (check) {
+			return;
+		}
+		const accounts = JSON.parse(localStorage.getItem("accounts"));
+		const some = accounts?.find(
+			(item) => item?.email == user?.email && item?.password == user?.password
+		);
+		if (!some) {
+			return setMsg({
+				email: true,
+				reemail: true,
+			});
+		}
+		localStorage.setItem("user", JSON.stringify(some));
+		toast.success("Đăng nhập thành công.", {
+			autoClose: 2000,
+		});
+		navigate("/");
+	};
 	return (
 		<div className="auth">
 			<div className="auth_wrap">
@@ -23,15 +63,23 @@ const Login = () => {
 				</div>
 				<div className="auth_title">Hoặc</div>
 				<div className="auth_input">
-					<input type="text" placeholder="Email *" />
+					<input ref={emailRef} type="text" placeholder="Email *" />
 				</div>
-				<div className="auth_fix">Email không được để trống.</div>
+				{msg?.email && (
+					<div className="auth_fix">
+						{msg?.reemail
+							? "Email hoặc mật khẩu đang sai"
+							: "Email không được để trống."}
+					</div>
+				)}
 				<div className="auth_input">
-					<input type="text" placeholder="Password *" />
+					<input ref={passwordRef} type="text" placeholder="Password *" />
 				</div>
-				<div className="auth_fix">Mật khẩu không được để trống</div>
+				{msg?.password && (
+					<div className="auth_fix">Mật khẩu không được để trống</div>
+				)}
 				<div className="auth_button_login">
-					<button>Đăng ký</button>
+					<button onClick={handleLogin}>Đăng nhập</button>
 					<Link className="forogt" to="/">
 						Quên mật khẩu
 					</Link>
