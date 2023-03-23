@@ -1,10 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import "./style.css";
-const Header = () => {
-	const [search, setSearch] = useState("");
-
+const Header = (props) => {
+	const [search, setSearch] = useState(""); // -- set setSerachValue in App.js
+	const inputRef = useRef(null);
+	const onButtonClick = () => {
+		inputRef.current.value = "";
+		setSearchValue("")
+		setSearch("")
+	};
+	const { setSearchValue, searchValue } = props
 	const [user, setUser] = useState({});
 	const navigate = useNavigate();
 
@@ -42,14 +48,26 @@ const Header = () => {
 					<input
 						onChange={(e) => {
 							setSearch(e.target.value);
+							// setSearchValue(e.target.value);  -- set setSerachValue in App.js search realtime
 						}}
 						type="text"
 						placeholder="Nhập tên phim cần tìm"
+						ref={inputRef}
 					/>
-					{search && <div>x</div>}
+					{search &&
+						<div>
+							<button onClick={onButtonClick}>X</button>
+						</div>
+					}
 				</div>
 				<div className="search_button">
-					<button>Tìm</button>
+					<button
+						onClick={() => {
+							setSearchValue(search); // -- search normal
+						}}
+					>
+						Tìm
+					</button>
 				</div>
 				{user?.email && (
 					<div className="congra">Chào mừng: {user?.username}</div>
