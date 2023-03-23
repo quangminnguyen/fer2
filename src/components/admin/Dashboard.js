@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import Movie from "./Movie";
 import "./style.css";
 import User from "./User";
 const Dashboard = () => {
@@ -35,9 +36,7 @@ const Dashboard = () => {
 							<i>Information</i>
 						</h1>
 					</div>
-					<div className="dashboard_table">
-						<User />
-					</div>
+					<div className="dashboard_table">{kind ? <Movie /> : <User />}</div>
 				</div>
 			</div>
 		</div>
