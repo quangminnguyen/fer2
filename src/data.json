@@ -85,6 +85,13 @@
 			"rateStar": 8,
 			"comment": "Phim này hay quá ae ạ",
 			"account_id": 2
+		},
+		{
+			"id": 2,
+			"movie_id": 1,
+			"rateStar": 9,
+			"comment": "Rất hài hước",
+			"account_id": 1
 		}
 	]
 }
