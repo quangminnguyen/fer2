@@ -39,6 +39,7 @@ const Register = () => {
 			...user,
 			role: "user",
 			id: accounts ? accounts[accounts?.length - 1]?.id * 1 + 1 : 1,
+			block: false,
 		};
 		const some = accounts?.some((item) => item?.email == newUser?.email);
 		if (some) {

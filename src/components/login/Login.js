@@ -28,7 +28,10 @@ const Login = () => {
 		}
 		const accounts = JSON.parse(localStorage.getItem("accounts"));
 		const some = accounts?.find(
-			(item) => item?.email == user?.email && item?.password == user?.password
+			(item) =>
+				item?.email == user?.email &&
+				item?.password == user?.password &&
+				!item?.block
 		);
 		if (!some) {
 			return setMsg({
