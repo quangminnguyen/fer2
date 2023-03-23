@@ -58,7 +58,7 @@ const User = () => {
 				</thead>
 				<tbody>
 					{user?.map((item, index) => (
-						<tr className="t_row_2">
+						<tr key={index + "tbale"} className="t_row_2">
 							<th className="t_stt font_400">{index + 1}</th>
 							<th className="t_id font_400">{item?.id}</th>
 							<th className="t_email font_400">{item?.email}</th>

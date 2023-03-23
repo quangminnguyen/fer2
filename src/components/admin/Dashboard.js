@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import Genre from "./Genre";
 import Movie from "./Movie";
 import "./style.css";
 import User from "./User";
@@ -25,8 +26,21 @@ const Dashboard = () => {
 						</div>
 					</Link>
 					<Link className="items_link" to="?type=movie">
-						<div className={`dashboard_nav_items ${!kind ? "" : "active"}`}>
+						<div
+							className={`dashboard_nav_items ${
+								kind !== "movie" ? "" : "active"
+							}`}
+						>
 							Manage movie
+						</div>
+					</Link>
+					<Link className="items_link" to="?type=genre">
+						<div
+							className={`dashboard_nav_items ${
+								kind !== "genre" ? "" : "active"
+							}`}
+						>
+							Manage Genre
 						</div>
 					</Link>
 				</div>
@@ -36,7 +50,9 @@ const Dashboard = () => {
 							<i>Information</i>
 						</h1>
 					</div>
-					<div className="dashboard_table">{kind ? <Movie /> : <User />}</div>
+					<div className="dashboard_table">
+						{kind ? kind === "movie" ? <Movie /> : <Genre /> : <User />}
+					</div>
 				</div>
 			</div>
 		</div>
