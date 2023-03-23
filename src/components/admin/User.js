@@ -3,23 +3,44 @@ import "./style.css";
 const User = () => {
 	const [user, setUser] = useState([]);
 
+	const [cuUser, setCuUser] = useState({});
+
 	useEffect(() => {
 		const users = localStorage.getItem("accounts");
 		if (users) {
 			setUser(JSON.parse(users));
 		}
 	}, []);
+	useEffect(() => {
+		if (localStorage.getItem("user")) {
+			setCuUser(JSON.parse(localStorage.getItem("user")));
+		} else {
+			setCuUser({});
+		}
+	}, [localStorage.getItem("user")]);
 
-	const handleBan = (index) => {
+	const handleBan = (index, item) => {
 		const ar = user;
+		const some = ar?.some(
+			(infor) => infor?.id?.toString() === item?.id?.toString()
+		);
+		if (some) {
+			return window.alert("Bạn không thể block chính ban.");
+		}
 		ar[index].block = true;
 		localStorage.removeItem("accounts");
 		localStorage.setItem("accounts", JSON.stringify(ar));
 		setUser([...ar]);
 	};
 
-	const handleUnban = (index) => {
+	const handleUnban = (index, item) => {
 		const ar = user;
+		const some = ar?.some(
+			(infor) => infor?.id?.toString() === item?.id?.toString()
+		);
+		if (some) {
+			return window.alert("Bạn không thể unBlock chính bạn.");
+		}
 		ar[index].block = false;
 		localStorage.removeItem("accounts");
 		localStorage.setItem("accounts", JSON.stringify(ar));
@@ -56,13 +77,13 @@ const User = () => {
 							<th className="t_bars">
 								{!item?.block ? (
 									<i
-										onClick={() => handleBan(index)}
+										onClick={() => handleBan(index, item)}
 										style={{ cursor: "pointer", color: "red" }}
 										className="fa-solid fa-ban"
 									></i>
 								) : (
 									<i
-										onClick={() => handleUnban(index)}
+										onClick={() => handleUnban(index, item)}
 										style={{ cursor: "pointer", color: "green" }}
 										className="fa-solid fa-check"
 									></i>
