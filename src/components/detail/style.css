@@ -3,25 +3,28 @@
   margin: auto;
   margin-top: 3%;
   display: flex;
-  border: 1px solid;
+  text-align: start;
 }
 .image {
   width: 50%;
-  padding: 0% 4% 4% 0%;
-  height: auto;
+  height: 70vh;
+}
+.image img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border: 1px solid green;
 }
 .movieInfor {
   width: 100%;
-  padding-bottom: 4%;
 
-  margin: 0% 4% 0% 4%;
-  text-align: start;
+  margin: 0% 2% 0% 4%;
+}
+.detailInfor {
+  padding-bottom: 3%;
   border-bottom: 1px solid rgb(207, 207, 207);
 }
 .inforTech {
-  padding: 0.5% 0;
+  padding: 0.8% 0;
 }
 .rateButton {
   background-color: rgb(73, 109, 171);
@@ -30,4 +33,18 @@
   margin-top: 3%;
   padding: 1% 2%;
   border: white;
+}
+.text {
+  font-size: 1.5rem;
+}
+.textTitle {
+  font-size: 3.2rem;
+  font-weight: normal;
+  padding-bottom: 1%;
+}
+.textDesTilte {
+  font-weight: bold;
+}
+.detailRate{
+    margin-top: 2%;
 }
