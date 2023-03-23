@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import dataRoot from "./data.json";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
+import { ToastContainer } from "react-toastify";
 function App() {
 	const [data, setData] = useState(dataRoot);
 	useEffect(() => {
@@ -24,6 +25,10 @@ function App() {
 			localStorage.setItem("reviews", JSON.stringify(data?.reviews));
 		}
 	}, []);
+
+	const handleClearLocalStorage = () => {
+		localStorage.clear();
+	};
 	return (
 		<Router>
 			<div className="App">
@@ -35,6 +40,10 @@ function App() {
 					<Route path="/login" element={<Login data={data} />} />
 				</Routes>
 				<Footer />
+				<ToastContainer style={{ fontSize: "1.5rem" }} />
+				<div onClick={handleClearLocalStorage} title="Clear" className="clear">
+					Clear
+				</div>
 			</div>
 		</Router>
 	);
