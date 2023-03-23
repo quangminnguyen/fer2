@@ -21,11 +21,9 @@ const User = () => {
 
 	const handleBan = (index, item) => {
 		const ar = user;
-		const some = ar?.some(
-			(infor) => infor?.id?.toString() === item?.id?.toString()
-		);
+		const some = item?.id?.toString() === cuUser?.id?.toString();
 		if (some) {
-			return window.alert("Bạn không thể block chính ban.");
+			return window.alert("Bạn không thể block chính bạn.");
 		}
 		ar[index].block = true;
 		localStorage.removeItem("accounts");
@@ -35,9 +33,7 @@ const User = () => {
 
 	const handleUnban = (index, item) => {
 		const ar = user;
-		const some = ar?.some(
-			(infor) => infor?.id?.toString() === item?.id?.toString()
-		);
+		const some = item?.id?.toString() === cuUser?.id?.toString();
 		if (some) {
 			return window.alert("Bạn không thể unBlock chính bạn.");
 		}
