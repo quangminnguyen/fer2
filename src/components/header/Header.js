@@ -1,8 +1,28 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import "./style.css";
 const Header = () => {
 	const [search, setSearch] = useState("");
+
+	const [user, setUser] = useState({});
+	const navigate = useNavigate();
+
+	useEffect(() => {
+		if (localStorage.getItem("user")) {
+			setUser({
+				...JSON.parse(localStorage.getItem("user")),
+			});
+		}
+	}, [localStorage.getItem("user")]);
+
+	const handleLogout = () => {
+		localStorage.removeItem("user");
+		toast.success("Đăng xuất thành công.", {
+			autoClose: 2000,
+		});
+		setUser({});
+	};
 	return (
 		<div className="header">
 			<div className="d-flex brand">
@@ -31,8 +51,34 @@ const Header = () => {
 				<div className="search_button">
 					<button>Tìm</button>
 				</div>
-				<button className="header_button">Đăng nhập</button>
-				<button className="header_button">Đăng ký</button>
+				{user?.email && (
+					<div className="congra">Chào mừng: {user?.username}</div>
+				)}
+				{user?.email && (
+					<button onClick={handleLogout} className="header_button">
+						Đăng xuất
+					</button>
+				)}
+				{!user?.email && (
+					<button
+						onClick={() => {
+							navigate("/login");
+						}}
+						className="header_button"
+					>
+						Đăng nhập
+					</button>
+				)}
+				{!user?.email && (
+					<button
+						onClick={() => {
+							navigate("/register");
+						}}
+						className="header_button"
+					>
+						Đăng ký
+					</button>
+				)}
 			</div>
 		</div>
 	);

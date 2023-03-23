@@ -1,84 +1,90 @@
 {
-  "movies": [
-    {
-      "id": "1",
-      "image": "http://pic0.iqiyipic.com/image/20211206/f2/2e/a_100421840_m_601_en_m1_1013_638.jpg",
-      "name": "Vua Hải Tặc",
-      "type": "1",
-      "year": "2022",
-      "description": "One Piece, từng được xuất bản tại Việt Nam dưới tên gọi Đảo Hải Tặc là bộ manga dành cho lứa tuổi thiếu niên của tác giả Oda Eiichiro, được đăng định kì trên tạp chí Weekly Shōnen Jump, ra mắt lần đầu trên ấn bản số 34 vào ngày 19 tháng 7 năm 1997."
-    },
-    {
-      "id": "2",
-      "image": "https://danviet.mediacdn.vn/upload/2-2019/images/2019-06-04/Ve-nha-di-con-duoc-tang-so-tap-va-thoi-gian-dong-may-du-kien-dai-hon-56485547_2574630002822221_2523342287681880064_n-1559624631-width960height960.jpg",
-      "name": "Về nhà đi con",
-      "type": "2",
-      "year": "2021",
-      "description": "Về nhà đi con là một bộ phim truyền hình được thực hiện bởi Trung tâm Phim truyền hình Việt Nam, Đài Truyền hình Việt Nam do NSƯT Nguyễn Danh Dũng làm đạo diễn. Phim phát sóng vào lúc 21h00 bắt đầu từ ngày 8 tháng 4 năm 2019 và kết thúc vào ngày 12 tháng 8 năm 2019 trên kênh VTV1."
-    },
-    {
-      "id": "3",
-      "image": "https://afamilycdn.com/150157425591193600/2021/10/9/poster-mat-na-guong-poster-printart-1633755811868240956829.jpg",
-      "name": "Mặt nạ gương",
-      "type": "3",
-      "year": "2021",
-      "description": "Mặt nạ gương là một bộ phim truyền hình thuộc loạt phim Cảnh sát hình sự được thực hiện bởi Trung tâm Phim truyền hình Việt Nam, Đài Truyền hình Việt Nam do Bùi Quốc Việt làm đạo diễn."
-    },
-    {
-      "id": "4",
-      "name": "https://cdnimg.vietnamplus.vn/uploaded/tpuoaob/2022_06_03/033.jpg",
-      "type": "2",
-      "year": "2022",
-      "description": "Bộ phim nói về sự chênh vênh giữa những người vừa bước qua tuổi cấp 3 và các bạn trẻ phải tự quyết định được tương lai của mình, những hành động của mình. Tuy nhiên, những hành động đó vẫn ở trong khuôn khổ kèm cặp của nhà trường và gia đình. Họ sẽ vướng vào những khúc mắc gì và suy nghĩ của họ như thế nào và họ sẽ phải đứng lên như thế nào để hướng đến tương lai tốt đẹp"
-    },
-    {
-      "id": "5",
-      "image": "https://cdn1-img.net/images/1678563074.jpg",
-      "name": "Nỗi ám ảnh",
-      "type": "4",
-      "year": "2021",
-      "description": "Delusion là một bộ phim kinh dị hồi hộp Trung Quốc-Hồng Kông năm 2016 do Danny Pang Phat làm đạo diễn và có sự tham gia của Pakho Chau, An Hu, Cici và Cheng Yuanyuan. Nó được phát hành tại Trung Quốc bởi Huace Pictures vào ngày 6 tháng 5 năm 2016."
-    }
-  ],
-  "types": [
-    {
-      "id": "1",
-      "name": "Hoạt hình"
-    },
-    {
-      "id": "2",
-      "name": "Tình cảm"
-    },
-    {
-      "id": "3",
-      "name": "Hành động"
-    },
-    {
-      "id": "4",
-      "name": "Kinh dị"
-    }
-  ],
-  "accounts": [
-    {
-      "id": "1",
-      "username": "admin",
-      "password": "admin",
-      "role": "admin"
-    },
-    {
-      "id": "2",
-      "username": "user",
-      "password": "user",
-      "role": "user"
-    }
-  ],
-  "reviews": [
-    {
-      "id": "1",
-      "movie_id": "1",
-      "rateStar": "8",
-      "comment": "Phim này hay quá ae ạ",
-      "account_id": "2"
-    }
-  ]
+	"movies": [
+		{
+			"id": 1,
+			"image": "http://pic0.iqiyipic.com/image/20211206/f2/2e/a_100421840_m_601_en_m1_1013_638.jpg",
+			"name": "Vua Hải Tặc",
+			"type": 1,
+			"year": 2022,
+			"description": "One Piece, từng được xuất bản tại Việt Nam dưới tên gọi Đảo Hải Tặc là bộ manga dành cho lứa tuổi thiếu niên của tác giả Oda Eiichiro, được đăng định kì trên tạp chí Weekly Shōnen Jump, ra mắt lần đầu trên ấn bản số 34 vào ngày 19 tháng 7 năm 1997."
+		},
+		{
+			"id": 2,
+			"image": "https://danviet.mediacdn.vn/upload/2-2019/images/2019-06-04/Ve-nha-di-con-duoc-tang-so-tap-va-thoi-gian-dong-may-du-kien-dai-hon-56485547_2574630002822221_2523342287681880064_n-1559624631-width960height960.jpg",
+			"name": "Về nhà đi con",
+			"type": 2,
+			"year": 2021,
+			"description": "Về nhà đi con là một bộ phim truyền hình được thực hiện bởi Trung tâm Phim truyền hình Việt Nam, Đài Truyền hình Việt Nam do NSƯT Nguyễn Danh Dũng làm đạo diễn. Phim phát sóng vào lúc 21h00 bắt đầu từ ngày 8 tháng 4 năm 2019 và kết thúc vào ngày 12 tháng 8 năm 2019 trên kênh VTV1."
+		},
+		{
+			"id": 3,
+			"image": "https://afamilycdn.com/150157425591193600/2021/10/9/poster-mat-na-guong-poster-printart-1633755811868240956829.jpg",
+			"name": "Mặt nạ gương",
+			"type": 3,
+			"year": 2021,
+			"description": "Mặt nạ gương là một bộ phim truyền hình thuộc loạt phim Cảnh sát hình sự được thực hiện bởi Trung tâm Phim truyền hình Việt Nam, Đài Truyền hình Việt Nam do Bùi Quốc Việt làm đạo diễn."
+		},
+		{
+			"id": 4,
+			"name": "https://cdnimg.vietnamplus.vn/uploaded/tpuoaob/2022_06_03/033.jpg",
+			"type": 2,
+			"year": 2022,
+			"description": "Bộ phim nói về sự chênh vênh giữa những người vừa bước qua tuổi cấp 3 và các bạn trẻ phải tự quyết định được tương lai của mình, những hành động của mình. Tuy nhiên, những hành động đó vẫn ở trong khuôn khổ kèm cặp của nhà trường và gia đình. Họ sẽ vướng vào những khúc mắc gì và suy nghĩ của họ như thế nào và họ sẽ phải đứng lên như thế nào để hướng đến tương lai tốt đẹp"
+		},
+		{
+			"id": 5,
+			"image": "https://cdn1-img.net/images/1678563074.jpg",
+			"name": "Nỗi ám ảnh",
+			"type": 4,
+			"year": 2021,
+			"description": "Delusion là một bộ phim kinh dị hồi hộp Trung Quốc-Hồng Kông năm 2016 do Danny Pang Phat làm đạo diễn và có sự tham gia của Pakho Chau, An Hu, Cici và Cheng Yuanyuan. Nó được phát hành tại Trung Quốc bởi Huace Pictures vào ngày 6 tháng 5 năm 2016."
+		}
+	],
+	"types": [
+		{
+			"id": 1,
+			"name": "Hoạt hình"
+		},
+		{
+			"id": 2,
+			"name": "Tình cảm"
+		},
+		{
+			"id": 3,
+			"name": "Hành động"
+		},
+		{
+			"id": 4,
+			"name": "Kinh dị"
+		}
+	],
+	"accounts": [
+		{
+			"id": 1,
+			"username": "admin",
+			"email": "admin",
+			"password": "admin",
+			"role": "admin",
+			"gender": "Nam",
+			"block": false
+		},
+		{
+			"id": 2,
+			"username": "user",
+			"password": "user",
+			"role": "user",
+			"email": "user",
+			"gender": "Nam",
+			"block": false
+		}
+	],
+	"reviews": [
+		{
+			"id": 1,
+			"movie_id": 1,
+			"rateStar": 8,
+			"comment": "Phim này hay quá ae ạ",
+			"account_id": 2
+		}
+	]
 }
