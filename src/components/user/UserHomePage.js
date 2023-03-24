@@ -39,7 +39,6 @@ const UserHomePage = ({ data }) => {
 			const ar = newData?.filter((item) =>
 				item?.name?.toLowerCase()?.includes(searchValue?.toLowerCase())
 			);
-			console.log(ar);
 			setSearchData([...ar]);
 		} else {
 			setSearchData("");
