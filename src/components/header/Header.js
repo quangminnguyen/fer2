@@ -31,7 +31,7 @@ const Header = () => {
 				<div>
 					<h1>Phim hay</h1>
 				</div>
-				<div className="menu">
+				<div className="menu_bars">
 					<span>
 						<Link className="link" to="/">
 							Trang chủ
