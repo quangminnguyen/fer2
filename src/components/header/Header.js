@@ -2,15 +2,13 @@ import React, { useEffect, useState, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import "./style.css";
-const Header = (props) => {
+const Header = () => {
 	const [search, setSearch] = useState(""); // -- set setSerachValue in App.js
 	const inputRef = useRef(null);
 	const onButtonClick = () => {
 		inputRef.current.value = "";
-		setSearchValue("")
-		setSearch("")
+		setSearch("");
 	};
-	const { setSearchValue, searchValue } = props
 	const [user, setUser] = useState({});
 	const navigate = useNavigate();
 
@@ -24,10 +22,8 @@ const Header = (props) => {
 
 	const handleLogout = () => {
 		localStorage.removeItem("user");
-		toast.success("Đăng xuất thành công.", {
-			autoClose: 2000,
-		});
-		setUser({});
+		navigate("/");
+		window.location.reload();
 	};
 	return (
 		<div className="header">
@@ -47,23 +43,30 @@ const Header = (props) => {
 				<div className="search_items d-flex">
 					<input
 						onChange={(e) => {
-							setSearch(e.target.value);
-							// setSearchValue(e.target.value);  -- set setSerachValue in App.js search realtime
+							if (e.target.value) {
+								navigate(`?search=${e.target.value}`);
+							} else {
+								navigate("/");
+							}
 						}}
 						type="text"
 						placeholder="Nhập tên phim cần tìm"
 						ref={inputRef}
 					/>
-					{search &&
+					{search && (
 						<div>
 							<button onClick={onButtonClick}>X</button>
 						</div>
-					}
+					)}
 				</div>
 				<div className="search_button">
 					<button
 						onClick={() => {
-							setSearchValue(search); // -- search normal
+							if (inputRef.current.value) {
+								navigate(`?search=${inputRef.current.value}`);
+							} else {
+								navigate("/");
+							}
 						}}
 					>
 						Tìm

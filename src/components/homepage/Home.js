@@ -11,8 +11,15 @@ const Home = ({ data, searchValue }) => {
 			setUser({});
 		}
 	}, [localStorage.getItem("user")]);
-	return <div>{user?.role === "admin" ? <Dashboard /> : 
-		<UserHomePage data={data} searchValue={searchValue} />}</div>;
+	return (
+		<div>
+			{user?.role === "admin" ? (
+				<Dashboard />
+			) : (
+				<UserHomePage data={data} searchValue={searchValue} />
+			)}
+		</div>
+	);
 };
 
 export default Home;

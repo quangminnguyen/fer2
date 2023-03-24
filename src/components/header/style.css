@@ -10,6 +10,10 @@
 .brand {
 	align-items: center;
 }
+.brand > div > h1 {
+	margin-top: 1rem;
+	font-size: 1.8rem;
+}
 .menu {
 	font-size: 1.5rem;
 	margin-left: 2rem;

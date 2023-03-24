@@ -33,7 +33,7 @@ function App() {
 	return (
 		<Router>
 			<div className="App">
-				<Header setSearchValue={setSearchValue} searchValue={searchValue} />
+				<Header />
 				<Routes>
 					<Route
 						path="/"
