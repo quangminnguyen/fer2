@@ -33,9 +33,12 @@ function App() {
 	return (
 		<Router>
 			<div className="App">
-				<Header setSearchValue={setSearchValue} searchValue={searchValue}/>
+				<Header setSearchValue={setSearchValue} searchValue={searchValue} />
 				<Routes>
-					<Route path="/" element={<Home data={data} searchValue={searchValue}  />} />
+					<Route
+						path="/"
+						element={<Home data={data} searchValue={searchValue} />}
+					/>
 					<Route path="/:slug" element={<Detail data={data} />} />
 					<Route path="/register" element={<Register data={data} />} />
 					<Route path="/login" element={<Login data={data} />} />
