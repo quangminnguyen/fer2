@@ -142,6 +142,7 @@ const Detail = () => {
 		if (!content) {
 			document.querySelector("#startRateWarn").innerHTML =
 				"Comment không thể empty!";
+			return;
 		}
 		let newComment = {
 			id: rates[rates?.length - 1]?.id + 1,
