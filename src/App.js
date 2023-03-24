@@ -11,6 +11,7 @@ import Footer from "./components/footer/Footer";
 import { ToastContainer } from "react-toastify";
 function App() {
 	const [data, setData] = useState(dataRoot);
+	const [searchValue, setSearchValue] = useState("");
 	useEffect(() => {
 		if (!localStorage.getItem("movies")) {
 			localStorage.setItem("movies", JSON.stringify(data?.movies));
@@ -32,9 +33,9 @@ function App() {
 	return (
 		<Router>
 			<div className="App">
-				<Header />
+				<Header setSearchValue={setSearchValue} searchValue={searchValue}/>
 				<Routes>
-					<Route path="/" element={<Home data={data} />} />
+					<Route path="/" element={<Home data={data} searchValue={searchValue}  />} />
 					<Route path="/:slug" element={<Detail data={data} />} />
 					<Route path="/register" element={<Register data={data} />} />
 					<Route path="/login" element={<Login data={data} />} />
